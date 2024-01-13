@@ -1,0 +1,16 @@
+{
+  "donations": [
+    {
+      "name": "Truffles",
+      "amount": 150
+    },
+    {
+      "name": "Pedrito",
+      "amount": 150
+    },
+    {
+      "name": "Felix",
+      "amount": 350
+    }
+  ]
+}
