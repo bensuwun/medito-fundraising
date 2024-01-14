@@ -1,0 +1,25 @@
+{
+    "data": {
+      "fundraisingProject": {
+        "name": "Flexible Fundraising Single Web Page",
+        "description": "We're creating a versatile single web page tailored for various fundraising initiatives. Whether it's for hiring talent, launching ad campaigns, or developing cool new features, this app is all about making fundraising engaging and effective! ",
+        "targetAmt": 5000,
+        "faqsCollection": {
+          "items": [
+            {
+              "question": "Can I use wix to design it?",
+              "answer": "No, you can't. It must be custom-coded."
+            }
+          ]
+        },
+        "rewardsCollection": {
+          "items": [
+            {
+              "reward": "Medito Premium",
+              "requiredAmt": 20
+            }
+          ]
+        }
+      }
+    }
+}
