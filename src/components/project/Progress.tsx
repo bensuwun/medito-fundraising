@@ -1,3 +1,5 @@
+import { Button } from "@mantine/core";
+
 /**
  * Props:
  *  - Amount Raised
@@ -12,7 +14,6 @@ export default function ProgressBar() {
             {/* Progress Bar Container */}
             <div className="flex w-full rounded-md relative h-3 bg-gray-200">
                 <div className="rounded-md border bg-gray-400 relative w-1/2">
-
                 </div>
             </div>
             <p>

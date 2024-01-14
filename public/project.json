@@ -1,25 +1,62 @@
 {
-    "data": {
-      "fundraisingProject": {
-        "name": "Flexible Fundraising Single Web Page",
-        "description": "We're creating a versatile single web page tailored for various fundraising initiatives. Whether it's for hiring talent, launching ad campaigns, or developing cool new features, this app is all about making fundraising engaging and effective! ",
-        "targetAmt": 5000,
-        "faqsCollection": {
-          "items": [
-            {
-              "question": "Can I use wix to design it?",
-              "answer": "No, you can't. It must be custom-coded."
-            }
-          ]
-        },
-        "rewardsCollection": {
-          "items": [
-            {
-              "reward": "Medito Premium",
-              "requiredAmt": 20
-            }
-          ]
-        }
+  "data": {
+    "fundraisingProject": {
+      "name": "Flexible Fundraising Single Web Page",
+      "description": "We're creating a versatile single web page tailored for various fundraising initiatives. Whether it's for hiring talent, launching ad campaigns, or developing cool new features, this app is all about making fundraising engaging and effective! ",
+      "targetAmt": 5000,
+      "faqsCollection": {
+        "items": [
+          {
+            "sys": {
+              "id": "6QE6LtsPNU4wQ7CIn9dkzI"
+            },
+            "question": "Can I use wix to design it?",
+            "answer": "No, you can't. It must be custom-coded."
+          },
+          {
+            "sys": {
+              "id": "8XZ2RmpQaC6wF9bgI2sL7U"
+            },
+            "question": "How can I contribute?",
+            "answer": "You can contribute by donating through our online platform or participating in our fundraising events."
+          },
+          {
+            "sys": {
+              "id": "3KP4lYoPzIx1nGt3WNB5mQ"
+            },
+            "question": "Is my donation tax-deductible? What about now",
+            "answer": "Yes, your donation is tax-deductible as we are a registered non-profit organization."
+          }
+        ]
+      },
+      "rewardsCollection": {
+        "items": [
+          {
+            "sys": {
+              "id": "6DIGPpwYYg0Tck5yT9OG1W"
+            },
+            "reward": "Medito Premium",
+            "requiredAmt": 20,
+            "description": "Brief description of the reward."
+          },
+          {
+            "sys": {
+              "id": "2HM7VktZNGPobJpplR9B1m"
+            },
+            "reward": "Tech Enthusiast Sticker Pack",
+            "requiredAmt": 50,
+            "description": "Show off your support with an exclusive sticker pack featuring tech-themed designs."
+          },
+          {
+            "sys": {
+              "id": "7TazrN1aXuqvwCJX1Q9g9L"
+            },
+            "reward": "VIP Tech Workshop Access",
+            "requiredAmt": 200,
+            "description": "Gain exclusive access to a VIP tech workshop hosted by industry experts."
+          }
+        ]
       }
     }
+  }
 }

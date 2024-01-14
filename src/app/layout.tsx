@@ -1,8 +1,11 @@
 import type { Metadata } from 'next'
-import { Raleway } from 'next/font/google'
-import './globals.css'
+import { Inter } from 'next/font/google'
+import '@mantine/core/styles.css';
+import './globals.css';
 
-const raleway = Raleway({ subsets: ['latin'] })
+import { ColorSchemeScript, MantineProvider } from '@mantine/core';
+
+const raleway = Inter({ subsets: ['latin'] })
 
 // Used to define application metadata to improve SEO and web shareability.
 export const metadata: Metadata = {
@@ -17,7 +20,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${raleway.className}`}>{children}</body>
+      <head>
+        <ColorSchemeScript />
+      </head>
+      <body className={`${raleway.className}`}>
+        <MantineProvider defaultColorScheme="light">
+          {children}
+        </MantineProvider>
+      </body>
     </html>
   )
 }
