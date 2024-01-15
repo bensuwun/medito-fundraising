@@ -19,7 +19,8 @@ export default function ProjectDetails (
             <h1 className="font-bold text-2xl">{name}</h1>
             <p>{description}</p>
             {/* Progress Bar */}
-            <Progress />
+            {/* @ts-expect-error Server Component */}
+            <Progress targetAmt={targetAmt}/>
 
             {/* Donate Button */}
             <div>
