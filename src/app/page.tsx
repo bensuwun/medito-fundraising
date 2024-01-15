@@ -1,6 +1,6 @@
-import Navbar from "../components/Navbar";
-import Progress from "../components/project/Progress";
 import project from "../../public/project.json";
+import Navbar from "../components/Navbar";
+import ProjectDetails from "../components/project/ProjectDetails";
 import ProjectTabs from "../components/project/ProjectTabs/ProjectTabs";
 
 export default function Home() {
@@ -10,19 +10,13 @@ export default function Home() {
     <>
       <Navbar />
 
-      <div className="container flex flex-col gap-3 p-7">
-        <h1 className="font-bold text-2xl">{proj.name}</h1>
-        <p>{proj.description}</p>
-        {/* Progress Bar */}
-        <Progress />
+      <ProjectDetails
+        name={proj.name}
+        description={proj.description}
+        targetAmt={proj.targetAmt}
+      />
 
-        {/* Donate Button */}
-        <div>
-
-        </div>
-      </div>
-
-      {/* Tabs */}
+      {/* Tabs and Panels */}
       <ProjectTabs 
         rewards={proj.rewardsCollection.items}
         faqs={proj.faqsCollection.items}

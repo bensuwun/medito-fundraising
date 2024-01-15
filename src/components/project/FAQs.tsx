@@ -22,7 +22,7 @@ export default function FAQs(
 {
     const accordionItems = items.map(item => {
         return (
-            <Accordion.Item key={item.sys.id} value={item.sys.id} className="p-2 rounded-md mb-2 border-2">
+            <Accordion.Item key={item.sys.id} value={item.sys.id} className="rounded-md mb-2 border-2">
                 <Accordion.Control>
                     <h3 className="font-semibold mr-2">{item.question}</h3>
                 </Accordion.Control>
