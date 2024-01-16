@@ -15,7 +15,7 @@ export default function Reward(
     return (
         <div className="border-2 p-4 flex flex-col gap-2 rounded-md">
             <div className="flex justify-between gap-6 leading-5">
-                <p className="h-full font-bold">{name}</p>
+                <p className="h-full font-semibold">{name}</p>
                 <p>{`$${amt}`}</p>
             </div>
             <p className="text-sm">{description}</p>   

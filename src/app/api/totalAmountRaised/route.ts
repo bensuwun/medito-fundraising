@@ -1,4 +1,4 @@
-import db from "../../../../data/db.json"
+import db from "../../../../public/db.json"
 
 export const dynamic = 'force-dynamic' // defaults to auto
 

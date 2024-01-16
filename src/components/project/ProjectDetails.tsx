@@ -7,11 +7,13 @@ export default function ProjectDetails (
     {
         name,
         description,
-        targetAmt
+        targetAmt,
+        totalAmtRaised
     } : {
         name: string,
         description: string,
-        targetAmt: number
+        targetAmt: number,
+        totalAmtRaised: number
     }) 
 {
     return (
@@ -19,8 +21,7 @@ export default function ProjectDetails (
             <h1 className="font-bold text-2xl">{name}</h1>
             <p>{description}</p>
             {/* Progress Bar */}
-            {/* @ts-expect-error Server Component */}
-            <Progress targetAmt={targetAmt}/>
+            <Progress targetAmt={targetAmt} totalAmtRaised={totalAmtRaised}/>
 
             {/* Donate Button */}
             <div>

@@ -3,9 +3,23 @@ import Navbar from "../components/Navbar";
 import ProjectDetails from "../components/project/ProjectDetails";
 import ProjectTabs from "../components/project/ProjectTabs/ProjectTabs";
 
-export default function Home() {
+export default async function Home() {
   // Obtain project details
-  const proj = project.data.fundraisingProject;
+  const proj = await project.data.fundraisingProject;
+
+  // Fetch donation data
+  var dataRetrieved: boolean = true;
+  var totalAmtRaised: number = 0;
+  // DEV NOTES: Update API call to total amount raised here. 
+  try {
+      const response = await fetch("http://localhost:3000/api/totalAmountRaised", { cache: 'no-store' });
+      const data = await response.json();
+      totalAmtRaised = data.sum;
+  } catch (error) {
+      dataRetrieved = false;
+      console.log(error);
+  }
+
   return (
     <>
       <Navbar />
@@ -14,6 +28,7 @@ export default function Home() {
         name={proj.name}
         description={proj.description}
         targetAmt={proj.targetAmt}
+        totalAmtRaised={totalAmtRaised}
       />
 
       {/* Tabs and Panels */}
