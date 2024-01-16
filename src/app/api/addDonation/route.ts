@@ -1,3 +1,4 @@
+import { NextResponse } from "next/server"
 import db from "../../../../data/db.json"
 
 export const dynamic = 'force-dynamic' // defaults to auto
@@ -7,8 +8,8 @@ export async function POST(request: Request) {
     const newData = await request.json()
     db.donations.push(newData)
 
-    return Response.json({ newData })
+    return NextResponse.json({ newData })
   } catch (error) {
-    return Response.json({ error })
+    return NextResponse.json({ error })
   }
 }
