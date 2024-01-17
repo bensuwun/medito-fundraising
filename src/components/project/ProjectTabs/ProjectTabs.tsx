@@ -17,12 +17,12 @@ export default function ProjectTabs (
         faqs: any    
     }) {
     return (
-        <Tabs defaultValue="faq" classNames={classes} className="border-t-2">
-          <Tabs.List justify="center">
-              <Tabs.Tab value="rewards">
+        <Tabs defaultValue="faq" classNames={classes} className="border-t-2 transition">
+          <Tabs.List justify="center" className="transition">
+              <Tabs.Tab value="rewards" className="transition ease-in">
                   Rewards
               </Tabs.Tab>
-              <Tabs.Tab value="faq">
+              <Tabs.Tab value="faq" className="transition ease-in">
                   FAQ
               </Tabs.Tab>
           </Tabs.List>
