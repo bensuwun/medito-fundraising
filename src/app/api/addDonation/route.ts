@@ -6,11 +6,11 @@ export const runtime = "edge";
 
 export async function POST(request: Request) {
   try {
-    const newData = await request.json()
+    const newData = await request.json();
     db.donations.push(newData)
 
     return NextResponse.json({ ...newData })
   } catch (error) {
-    return NextResponse.json({ error })
+    return NextResponse.json({ error }, {status: 400})
   }
 }

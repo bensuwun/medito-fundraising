@@ -18,7 +18,8 @@ export default function DonationNotif ()
     useEffect(() => {
         const fetchData = async () => {
             const data = await getRecentDonation();
-            setShouldNotify(false);
+            // DEV NOTE: Should update to false when database persists, set to true to showcase notification feature.
+            setShouldNotify(true);
             setRecentDonation((prevData) => {
                 if (JSON.stringify(data) !== JSON.stringify(prevData)) {
                     setShouldNotify(true);

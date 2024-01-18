@@ -19,6 +19,6 @@ export async function GET(request: NextRequest) {
     })
     return NextResponse.redirect(new URL('/', request.url))
   } catch (error) {
-    return NextResponse.json({ error })
+    return NextResponse.json({ error }, {status: 400})
   }
 }

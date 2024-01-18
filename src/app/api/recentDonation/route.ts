@@ -10,6 +10,6 @@ export async function GET() {
     
     return NextResponse.json({ ...result })
   } catch (error) {
-    return NextResponse.json({ error })
+    return NextResponse.json({ error }, {status: 400})
   }
 }

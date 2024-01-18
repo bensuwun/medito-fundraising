@@ -1,5 +1,3 @@
-import CURRENCY from "@/helpers/currencies";
-
 /**
  * The type for a specific donation.
  */

@@ -2,7 +2,6 @@ import project from "../../public/project.json";
 import ProjectDetails from "@/components/project/ProjectDetails";
 import ProjectTabs from "@/components/project/ProjectTabs/ProjectTabs";
 import DonationNotif from "@/components/project/DonationNotif/DonationNotif";
-import CURRENCY from "@/helpers/currencies";
 
 export default async function Home() {
   // Obtain project details
@@ -11,7 +10,6 @@ export default async function Home() {
 
   return (
     <>
-      {/* Client */}
       <DonationNotif />
 
       <ProjectDetails

@@ -60,18 +60,20 @@ export default function Donate() {
                         </div>
                         <div onBlur={() => {form.validateField("amount")}}>
                             <NumberInput
-                                min={0}
-                                placeholder="5"
+                                placeholder="1"
                                 hideControls
                                 className="grow"
                                 classNames={{
                                     input: classes["input-donate"]
                                 }}
+                                allowNegative={false}
+                                thousandSeparator=","
+                                clampBehavior="strict"
+                                min={1}
+                                max={99999}
                                 {...form.getInputProps('amount')}
                             />
                         </div>
-
-                        
                     </div>
                     <Button type="submit" className="bg-primary text-sm">
                         Donate 
