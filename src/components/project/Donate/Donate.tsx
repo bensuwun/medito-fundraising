@@ -65,7 +65,6 @@ export default function Donate() {
                     </Button>
                 </div>
             </form>
-                {/* <Button onClick={handleClick}>Donate</Button> */}
         </div>
     );
 };
