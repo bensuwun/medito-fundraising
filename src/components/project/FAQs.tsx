@@ -1,6 +1,7 @@
 "use client";
 
 import { Accordion } from "@mantine/core";
+import FAQForm from "./FAQForm";
 
 /**
  * Displays a dropdown containing the question and answer.
@@ -12,9 +13,7 @@ export default function FAQs(
     } : 
     {   
         items: [{
-            sys: {
-                id: string
-            }
+            id: string,
             question: string, 
             answer: string
         }]
@@ -22,9 +21,9 @@ export default function FAQs(
 {
     const accordionItems = items.map(item => {
         return (
-            <Accordion.Item key={item.sys.id} value={item.sys.id} className="rounded-md mb-2 border-2">
+            <Accordion.Item key={item.id} value={item.id} className="rounded-md mb-2 border-2">
                 <Accordion.Control>
-                    <h3 className="font-semibold mr-2">{item.question}</h3>
+                    <h3 className="mr-2 font-medium">{item.question}</h3>
                 </Accordion.Control>
                 <Accordion.Panel>
                     <p className="text-sm">{item.answer}</p>
@@ -34,8 +33,14 @@ export default function FAQs(
     });
 
     return (
-        <Accordion>
-            {accordionItems}
-        </Accordion>
+        <div>
+            <h2 className="text-xl mb-4 font-semibold">Frequently Asked Questions</h2>
+
+            {/* FAQ List */}
+            <Accordion className="mt-8">
+                {accordionItems}
+                <FAQForm />
+            </Accordion>
+        </div>
     );
 };
