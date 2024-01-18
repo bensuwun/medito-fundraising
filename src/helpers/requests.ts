@@ -2,7 +2,7 @@ import { DonationType, EmailQuestionType } from "@/types/Types";
 
 // Change to actual API endpoint
 const API_BASE_URL = process.env.NODE_ENV === "production" 
-    ? process.env.NEXT_PROD_API_BASE_URL
+    ? process.env.NEXT_PUBLIC_PROD_API_BASE_URL
     : process.env.NEXT_PUBLIC_DEV_API_BASE_URL;
 
 /**
