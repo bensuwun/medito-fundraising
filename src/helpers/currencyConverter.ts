@@ -55,7 +55,7 @@ function createCurrencyConverter(): (amount: number, fromCurrency: string, toCur
     GYD: 0.0048,
     HKD: 0.13,
     HNL: 0.041,
-
+      
 
 
   };

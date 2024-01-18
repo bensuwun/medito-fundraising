@@ -6,6 +6,24 @@ const API_BASE_URL = process.env.NODE_ENV === "production"
     : `http://localhost:3000/api`;
 
 /**
+ * Makes a POST request to add a new donation to the database.
+ */
+export async function insertDonation(donation: DonationType): Promise<DonationType | null> {
+    try {
+        const response = await fetch("http://localhost:3000/api/addDonation", { 
+            method: 'POST',
+            cache: 'no-store',
+            body: JSON.stringify({ donation }), 
+        });
+        const data = await response.json();
+        return data
+    } catch (error) {
+        console.log(error);
+    }
+    return null
+}
+
+/**
  * Makes a GET request to obtain the total amount raised.
  */
 export async function getTotalAmountRaised(): Promise<number> {

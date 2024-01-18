@@ -25,7 +25,7 @@ export default function DonationNotif ()
                 }
                 return data;
             })
-            console.log(data);
+            // console.log(data);
         }
 
         fetchData();

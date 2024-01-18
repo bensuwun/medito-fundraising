@@ -2,15 +2,18 @@
   "donations": [
     {
       "name": "Truffles",
-      "amount": 150
+      "amount": 150,
+      "currency": "USD"
     },
     {
       "name": "Pedrito",
-      "amount": 150
+      "amount": 150,
+      "currency": "USD"
     },
     {
       "name": "Felix",
-      "amount": 1040
+      "amount": 1040,
+      "currency": "USD"
     }
   ]
 }

@@ -9,7 +9,7 @@ export async function POST(request: Request) {
     const newData = await request.json()
     db.donations.push(newData)
 
-    return NextResponse.json({ newData })
+    return NextResponse.json({ ...newData })
   } catch (error) {
     return NextResponse.json({ error })
   }
