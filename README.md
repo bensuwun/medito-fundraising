@@ -1,8 +1,20 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-Tailwindcss and Mantine were used to help create the UI.
+## Configuration
+To configure the project's content, make the necessary changes in `project.json`. 
 
-## Files
+### Name, Description, and Target Amount
+Simply modify `name`, `description`, and `targetAmt` respectively.
+
+### Rewards
+To modify rewards and incentives, follow the format provided in `project.json`. The application will automatically scale up/down depending on the rewards and incentives added.
+
+**NOTE: It is important for each entry in the list to have a unique ID for them to be rendered properly and avoid issues.** 
+
+### FAQs
+Similar to rewards, follow the format provided in `project.json`.
+
+## Impt. File Directories
 ### /public
 The public folder contains the data for mocking and configuring the fundraising project. Any changes made here will reflect on the web application.
 
@@ -12,10 +24,27 @@ The public folder contains the data for mocking and configuring the fundraising 
     - Target amount (in USD)
     - FAQs
     - Rewards
-- `db.json`: Contains mock data for donations. Requires a `name`, `amount`, and `currency`.
+- `db.json`: Contains mock data for donations and is meant to simulate a database. Requires a `name`, `amount`, and `currency`.
 
 ### /helpers
+Contains utility functions to assist in data formatting and calculations.
 
+- `calculateGoalPercentage.ts` - Calculates the goal percentage based on `amtRaised` and `targetAmt`.
+- `currencyConverter.ts` - 
+- `currency.json`- 
+- `numberFormatter.ts` - Module containing functions that are responsible for formatting numbers (i.e. `numberFormatter` and `cashFormatter`).
+- `requests.ts` - Module containing requests to interact with APIs. Handles data fetching, adding donations, and stripe integrations (mock). **Also contains `NOTIF_INTERVAL` which indicates how often recent donations should be checked for notifications.**
+
+
+## Dependencies
+- `@mantine/core`
+- `@mantine/form`
+- `@mantine/hooks`
+- `@mantine/notifications`
+- `next`
+- `react`
+- `react-dom`
+- `stripe`
 
 ## Getting Started
 
@@ -45,9 +74,3 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
