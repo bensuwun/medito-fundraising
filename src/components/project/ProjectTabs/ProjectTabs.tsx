@@ -17,7 +17,7 @@ export default function ProjectTabs (
         faqs: any    
     }) {
     return (
-        <Tabs defaultValue="rewards" classNames={classes} className="border-t-2 transition">
+        <Tabs defaultValue="rewards" classNames={classes} className="transition">
           <Tabs.List justify="center" className="transition">
               <Tabs.Tab value="rewards" className="transition ease-in">
                   Rewards
@@ -27,20 +27,24 @@ export default function ProjectTabs (
               </Tabs.Tab>
           </Tabs.List>
 
-          <Tabs.Panel value="rewards" className="p-7 flex flex-col gap-3">
+          <Tabs.Panel value="rewards" className="py-7 px-8 flex flex-col gap-3 container mx-auto pb-page-sm lg:pb-page">
             {/* TODO: Update type */}
-            {rewards.map((reward: { id: string, tier: string, incentives: any, requiredAmt: number }) => {
-                return (
-                    <TierRewards
-                        key={reward.id}
-                        tier={reward.tier}
-                        incentives={reward.incentives}
-                        amt={reward.requiredAmt}
-                    /> 
-                )
-            })}
+            <h2 className="text-xl mb-4 font-semibold lg:text-center">Available Tier Rewards</h2>
+            <div className="flex flex-col lg:grid grid-cols-2 gap-4">
+                {rewards.map((reward: { id: string, tier: string, incentives: any, requiredAmt: number }) => {
+                    return (
+                        <TierRewards
+                            key={reward.id}
+                            tier={reward.tier}
+                            incentives={reward.incentives}
+                            amt={reward.requiredAmt}
+                        /> 
+                    )
+                })}
+            </div>
+            
           </Tabs.Panel>
-          <Tabs.Panel value="faq" className="p-7 flex flex-col gap-3">
+          <Tabs.Panel value="faq" className="p-7 container mx-auto pb-page-sm lg:pb-page">
             <div>
                 <FAQs items={faqs}/>
             </div>

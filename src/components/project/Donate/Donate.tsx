@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Dropdown from '../../Dropdown';
-import { Button, NumberInput, Select} from '@mantine/core';
+import { Button, NumberInput, Select } from '@mantine/core';
 import classes from "./Donate.module.css";
 
 const options = ['EUR', 'USD', 'CAD'];
@@ -37,14 +37,15 @@ export default function Donate() {
     };
 
     return (
-        <div className="border-2 p-4 flex justify-center gap-2 rounded-md">
+        <div>
+           <p className="font-medium">Support our cause</p>
            <form>
-                <div className="flex leading-5 gap-4">
-                    <div className="flex ">
+                <div className="flex flex-col  leading-5 gap-4">
+                    <div className="flex flex-col  gap-4 grow">
                         <Select
                             data={["USD", "CAD", "EUR"]}
                             defaultValue="USD"
-                            className="w-20 z-10 relative rounded-r-none"
+                            className=""
                             classNames={{
                                 input: classes["input-dropdown"]
                             }}
@@ -54,13 +55,13 @@ export default function Donate() {
                             value={textInputValue}
                             onChange={setTextInputValue}
                             hideControls
-                            className="relative focus:z-20"
+                            className="grow"
                             classNames={{
                                 input: classes["input-donate"]
                             }}
                         />
                     </div>
-                    <Button type="submit" className="bg-primary">
+                    <Button type="submit" className="bg-primary text-sm">
                         Donate 
                     </Button>
                 </div>

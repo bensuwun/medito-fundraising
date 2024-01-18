@@ -1,6 +1,6 @@
 "use client";
 
-import { Accordion, TextInput, Textarea, Button } from "@mantine/core";
+import { Accordion, TextInput, Textarea, Button, Card } from "@mantine/core";
 import { useForm, isNotEmpty } from "@mantine/form";
 
 /**
@@ -31,33 +31,35 @@ export default function FAQForm() {
     }
 
     return (
-        <Accordion.Item key="faqForm" value="faqForm" className="rounded-md mb-2 border-2">
-            <Accordion.Control>
-                <h3 className="mr-2 font-medium">Have other questions?</h3>
-            </Accordion.Control>
-            <Accordion.Panel>
-                <form onSubmit={form.onSubmit(async (values) => askQuestion(values))}>
-                    <div className="flex flex-col mb-4 gap-4">
-                        <div onBlur={() => {form.validateField("email")}}>
-                            <TextInput
-                                label="Email address"
-                                placeholder="Enter a valid email address"
-                                {...form.getInputProps("email")}
-                            />
-                        </div>
-                        <div onBlur={() => {form.validateField("question")}}>
-                            <Textarea
-                                label="Question"
-                                placeholder="Your question here"
-                                {...form.getInputProps("question")}
+        <Accordion.Item key="faqForm" value="faqForm" className="mb-2 px-0 py-1 border-none">
+            <Card shadow="sm" radius="md" withBorder className="px-1 py-0">
+                <Accordion.Control>
+                    <h3 className="mr-2 font-medium">Have other questions?</h3>
+                </Accordion.Control>
+                <Accordion.Panel>
+                    <form onSubmit={form.onSubmit(async (values) => askQuestion(values))}>
+                        <div className="flex flex-col mb-4 gap-4">
+                            <div onBlur={() => {form.validateField("email")}}>
+                                <TextInput
+                                    label="Email address"
+                                    placeholder="Enter a valid email address"
+                                    {...form.getInputProps("email")}
                                 />
+                            </div>
+                            <div onBlur={() => {form.validateField("question")}}>
+                                <Textarea
+                                    label="Question"
+                                    placeholder="Your question here"
+                                    {...form.getInputProps("question")}
+                                    />
+                            </div>
                         </div>
-                    </div>
-                    <Button type="submit" className="bg-primary">
-                        Ask question 
-                    </Button>
-                </form>
-            </Accordion.Panel>
+                        <Button type="submit" className="bg-primary w-full">
+                            Ask question
+                        </Button>
+                    </form>
+                </Accordion.Panel>
+            </Card>
         </Accordion.Item>
     );
 };

@@ -1,4 +1,4 @@
-import { List } from "@mantine/core";
+import { List, Card } from "@mantine/core";
 /**
  * Displays rewards/incentives for a given tier.
  */
@@ -17,7 +17,7 @@ export default function TierRewards(
     }) 
 {
     return (
-        <div className="border-2 p-4 flex flex-col gap-2 rounded-md">
+        <Card shadow="sm" padding="lg" radius="md" withBorder className="px-8">
             <div className="flex justify-between gap-6 leading-5">
                 <p className="h-full font-semibold">{tier}</p>
                 <p>{`$${amt}`}</p>
@@ -31,6 +31,6 @@ export default function TierRewards(
                     )
                 })}
             </List>
-        </div>
+        </Card>
     )
 }

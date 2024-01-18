@@ -1,6 +1,6 @@
 "use client";
 
-import { Accordion } from "@mantine/core";
+import { Accordion, Card } from "@mantine/core";
 import FAQForm from "./FAQForm";
 
 /**
@@ -21,23 +21,25 @@ export default function FAQs(
 {
     const accordionItems = items.map(item => {
         return (
-            <Accordion.Item key={item.id} value={item.id} className="rounded-md mb-2 border-2">
-                <Accordion.Control>
-                    <h3 className="mr-2 font-medium">{item.question}</h3>
-                </Accordion.Control>
-                <Accordion.Panel>
-                    <p className="text-sm">{item.answer}</p>
-                </Accordion.Panel>
+            <Accordion.Item key={item.id} value={item.id} className="px-0 py-1 border-none">
+                <Card shadow="sm" padding="0" radius="md" withBorder className="px-1">
+                    <Accordion.Control>
+                        <h3 className="mr-2 font-medium">{item.question}</h3>
+                    </Accordion.Control>
+                    <Accordion.Panel>
+                        <p className="text-sm">{item.answer}</p>
+                    </Accordion.Panel>
+                </Card>
             </Accordion.Item>
         );
     });
 
     return (
         <div>
-            <h2 className="text-xl mb-4 font-semibold">Frequently Asked Questions</h2>
+            <h2 className="text-xl mb-4 font-semibold lg:text-center">Frequently Asked Questions</h2>
 
             {/* FAQ List */}
-            <Accordion className="mt-8">
+            <Accordion className="mt-8 flex flex-col gap-2">
                 {accordionItems}
                 <FAQForm />
             </Accordion>

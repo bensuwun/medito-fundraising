@@ -7,3 +7,7 @@
     --primary-color: #4D4D4D;
     --progress-color: #40A94A;
 }
+
+body {
+    background-color: #f5f5f5
+}

@@ -16,6 +16,10 @@ const config: Config = {
       colors: {
         "primary": "var(--primary-color)",
         "progress-bar": "var(--progress-color)",
+      },
+      spacing: {
+        "page": "5rem",
+        "page-sm": "3rem"
       }
     },
   },

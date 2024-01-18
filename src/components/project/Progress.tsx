@@ -23,7 +23,7 @@ export default function ProgressBar(
     
 
     return (
-        <div className="flex flex-col items-center gap-2 mt-4">
+        <div className="flex flex-col items-center gap-2 ">
             <p>
                 <span className="font-bold">
                     {`${cashFormatter(totalAmtRaised)} `}
