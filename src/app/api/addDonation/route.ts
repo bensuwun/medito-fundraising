@@ -1,3 +1,4 @@
+import db from "../../../../public/db.json"
 import { NextResponse } from "next/server"
 import db from "../../../../data/db.json"
 
