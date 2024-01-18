@@ -22,7 +22,7 @@ export function cashFormatter (amount: number | string, currency?: string) : str
         minimumFractionDigits: 0,
         maximumFractionDigits: 0,
     });
-    console.log(currency)
+    
     if (currency === null || currency === undefined)
         var formatted = `US$ ${nFormat.format(amount)}`;
     else 
