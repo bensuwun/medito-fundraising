@@ -2,7 +2,7 @@
 
 import { Button, NumberInput, Select } from '@mantine/core';
 import classes from "./Donate.module.css";
-import currency from '@/helpers/currency.json'
+import { CURRENCY } from '@/helpers/currencies';
 import { useForm, isInRange } from '@mantine/form';
 import { DonationType } from "@/types/Types";
 import { createCheckoutSession } from '@/helpers/requests';
@@ -50,7 +50,7 @@ export default function Donate() {
                     <div className="flex flex-col  gap-4 grow">
                         <div onBlur={() => form.validateField("currency")}>
                             <Select
-                                data={currency}
+                                data={Object.entries(CURRENCY).map(([currencyCode, { code }]) => `${code}`)}
                                 defaultValue="USD"
                                 classNames={{
                                     input: classes["input-dropdown"]

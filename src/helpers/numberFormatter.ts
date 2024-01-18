@@ -1,4 +1,4 @@
-import CURRENCY from "./currencies";
+import { CURRENCY } from "./currencies";
 
 /**
  * Returns a comma-separated string representation of the number provided.
@@ -14,7 +14,7 @@ export function numberFormatter (num : number) {
  * @param currency - currency of the amount
  * @returns string - formatted cash
  */
-export function cashFormatter (amount: number | string, currency?: CURRENCY) : string {
+export function cashFormatter (amount: number | string, currency?: string) : string {
     if (typeof(amount) === "string")
         amount = parseInt(amount);
 
@@ -22,20 +22,11 @@ export function cashFormatter (amount: number | string, currency?: CURRENCY) : s
         minimumFractionDigits: 0,
         maximumFractionDigits: 0,
     });
-
-    var formatted = `US$ ${nFormat.format(amount)}`;
-
-    switch(currency) {
-        // Defaults to USD currency
-        case CURRENCY.USD:
-            break;
-        case CURRENCY.EUR:
-            formatted = `€ ${nFormat.format(amount)}`;
-            break;
-        case CURRENCY.CAD:
-            formatted = `CA$ ${nFormat.format(amount)}`;
-            break;
-    }
+    console.log(currency)
+    if (currency === null || currency === undefined)
+        var formatted = `US$ ${nFormat.format(amount)}`;
+    else 
+        var formatted = `${CURRENCY[currency as keyof typeof CURRENCY].symbol} ${nFormat.format(amount)}`;
     
     return formatted;
 };
