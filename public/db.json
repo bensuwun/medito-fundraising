@@ -7,12 +7,12 @@
     },
     {
       "name": "Bob",
-      "amount": 500,
+      "amount": 250,
       "currency": "AED"
     },
     {
       "name": "Charlie",
-      "amount": 750,
+      "amount": 370,
       "currency": "AFN"
     },
     {
@@ -42,12 +42,12 @@
     },
     {
       "name": "Ivan",
-      "amount": 420,
+      "amount": 230,
       "currency": "AUD"
     },
     {
       "name": "Jasmine",
-      "amount": 670,
+      "amount": 200,
       "currency": "AWG"
     },
     {
@@ -82,12 +82,12 @@
     },
     {
       "name": "Quincy",
-      "amount": 670,
+      "amount": 250,
       "currency": "BMD"
     },
     {
       "name": "Rachel",
-      "amount": 880,
+      "amount": 150,
       "currency": "PHP"
     },
     {
@@ -102,7 +102,7 @@
     },
     {
       "name": "Ulysses",
-      "amount": 720,
+      "amount": 320,
       "currency": "BSD"
     },
     {
@@ -112,7 +112,7 @@
     },
     {
       "name": "Walter",
-      "amount": 610,
+      "amount": 100,
       "currency": "CAD"
     },
     {
@@ -137,7 +137,7 @@
     },
     {
       "name": "Bella",
-      "amount": 960,
+      "amount": 250,
       "currency": "CLP"
     },
     {
@@ -152,7 +152,7 @@
     },
     {
       "name": "Ethan",
-      "amount": 690,
+      "amount": 250,
       "currency": "CRC"
     },
     {
@@ -167,7 +167,7 @@
     },
     {
       "name": "Harmony",
-      "amount": 920,
+      "amount": 520,
       "currency": "DJF"
     },
     {
@@ -177,7 +177,7 @@
     },
     {
       "name": "Jade",
-      "amount": 780,
+      "amount": 250,
       "currency": "DOP"
     },
     {
@@ -187,7 +187,7 @@
     },
     {
       "name": "Liam",
-      "amount": 600,
+      "amount": 320,
       "currency": "EGP"
     },
     {
