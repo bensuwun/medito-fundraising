@@ -1,6 +1,6 @@
 /**
  * Used to test the payload of the ask question request.
- * @returns The new question payload.
+ * @returns The new question to ask.
  */
 export async function POST(request: Request) {
   try {

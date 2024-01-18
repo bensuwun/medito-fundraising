@@ -2,7 +2,7 @@
 
 import { Tabs } from "@mantine/core";
 import classes from "./ProjectTabs.module.css";
-import Reward from "../Reward";
+import TierRewards from "../TierRewards";
 import FAQs from "../FAQs";
 
 /**
@@ -17,7 +17,7 @@ export default function ProjectTabs (
         faqs: any    
     }) {
     return (
-        <Tabs defaultValue="faq" classNames={classes} className="border-t-2 transition">
+        <Tabs defaultValue="rewards" classNames={classes} className="border-t-2 transition">
           <Tabs.List justify="center" className="transition">
               <Tabs.Tab value="rewards" className="transition ease-in">
                   Rewards
@@ -28,12 +28,13 @@ export default function ProjectTabs (
           </Tabs.List>
 
           <Tabs.Panel value="rewards" className="p-7 flex flex-col gap-3">
-            {rewards.map((reward: { sys: { id: string }, reward: string, description: string, requiredAmt: number }) => {
+            {/* TODO: Update type */}
+            {rewards.map((reward: { id: string, tier: string, incentives: any, requiredAmt: number }) => {
                 return (
-                    <Reward
-                        key={reward.sys.id}
-                        name={reward.reward}
-                        description={reward.description}
+                    <TierRewards
+                        key={reward.id}
+                        tier={reward.tier}
+                        incentives={reward.incentives}
                         amt={reward.requiredAmt}
                     /> 
                 )

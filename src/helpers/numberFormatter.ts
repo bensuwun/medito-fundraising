@@ -1,16 +1,41 @@
+import CURRENCY from "./currencies";
+
 /**
- * Formats cash amount into US locale currency, including proper comma separation. Decimals are ignored.
- * @param amount - cash amount to be formatted
- * @returns 
+ * Returns a comma-separated string representation of the number provided.
+ * @param num number - number to format.
  */
-export function cashFormatter (amount: number | string) : string {
+export function numberFormatter (num : number) {
+    return new Intl.NumberFormat("en-US").format(num);
+}
+
+/**
+ * Formats cash amount to include proper comma separation AND currency-prefix. Decimals are ignored.
+ * @param amount - cash amount to be formatted
+ * @param currency - currency of the amount
+ * @returns string - formatted cash
+ */
+export function cashFormatter (amount: number | string, currency?: CURRENCY) : string {
     if (typeof(amount) === "string")
         amount = parseInt(amount);
 
-    const nFormat = new Intl.NumberFormat("en-US", {
-        style: "decimal",
+    var nFormat = new Intl.NumberFormat("en-US", {
         minimumFractionDigits: 0,
-        maximumFractionDigits: 0
-      });
-    return nFormat.format(amount);
+        maximumFractionDigits: 0,
+    });
+
+    var formatted = `US$ ${nFormat.format(amount)}`;
+
+    switch(currency) {
+        // Defaults to USD currency
+        case CURRENCY.USD:
+            break;
+        case CURRENCY.EUR:
+            formatted = `€ ${nFormat.format(amount)}`;
+            break;
+        case CURRENCY.CAD:
+            formatted = `CA$ ${nFormat.format(amount)}`;
+            break;
+    }
+    
+    return formatted;
 };

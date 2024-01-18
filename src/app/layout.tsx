@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import '@mantine/core/styles.css';
+import '@mantine/notifications/styles.css';
 import './globals.css';
 
 import { ColorSchemeScript, MantineProvider } from '@mantine/core';
+import { Notifications } from "@mantine/notifications";
 
 const raleway = Inter({ subsets: ['latin'] })
 
@@ -25,6 +27,7 @@ export default function RootLayout({
       </head>
       <body className={`${raleway.className}`}>
         <MantineProvider defaultColorScheme="light">
+          <Notifications position="top-right"/>
           {children}
         </MantineProvider>
       </body>

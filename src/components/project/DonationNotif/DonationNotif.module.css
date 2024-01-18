@@ -1,0 +1,7 @@
+.root {
+    background-color: #f5f5f5
+}
+
+.root::before {
+    background-color: black;
+}

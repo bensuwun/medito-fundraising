@@ -1,3 +1,4 @@
 .tab[data-active="true"] {
     font-weight: bold;
+    border-color: var(--primary-color)
 }

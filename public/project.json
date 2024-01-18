@@ -7,23 +7,17 @@
       "faqsCollection": {
         "items": [
           {
-            "sys": {
-              "id": "6QE6LtsPNU4wQ7CIn9dkzI"
-            },
+            "id": "1",
             "question": "Can I use wix to design it?",
             "answer": "No, you can't. It must be custom-coded."
           },
           {
-            "sys": {
-              "id": "8XZ2RmpQaC6wF9bgI2sL7U"
-            },
+            "id": "2",
             "question": "How can I contribute?",
             "answer": "You can contribute by donating through our online platform or participating in our fundraising events."
           },
           {
-            "sys": {
-              "id": "3KP4lYoPzIx1nGt3WNB5mQ"
-            },
+            "id": "3",
             "question": "Is my donation tax-deductible? What about now",
             "answer": "Yes, your donation is tax-deductible as we are a registered non-profit organization."
           }
@@ -32,28 +26,57 @@
       "rewardsCollection": {
         "items": [
           {
-            "sys": {
-              "id": "6DIGPpwYYg0Tck5yT9OG1W"
-            },
-            "reward": "Medito Premium",
+            "id": "1",
+            "tier": "Tier 1",
             "requiredAmt": 20,
-            "description": "Brief description of the reward."
+            "incentives": [
+              {
+                "id": "1", 
+                "description": "Guided meditation audio download"
+              },
+              {
+                "id": "2", 
+                "description": "10% off on meditation workshops"
+              },
+              {
+                "id": "3", 
+                "description": "Access to exclusive meditation resources"
+              }
+            ]
           },
           {
-            "sys": {
-              "id": "2HM7VktZNGPobJpplR9B1m"
-            },
-            "reward": "Tech Enthusiast Sticker Pack",
+            "id": "2",
+            "tier": "Tier 2",
             "requiredAmt": 50,
-            "description": "Show off your support with an exclusive sticker pack featuring tech-themed designs."
+            "incentives": [
+              {
+                "id": "1", 
+                "description": "Free mindfulness meditation app subscription for a month"
+              },
+              {
+                "id": "2", 
+                "description": "Exclusive access to live online meditation sessions"
+              },
+              {
+                "id": "3", 
+                "description": "Personalized meditation guidebook download"
+              }
+            ]
           },
           {
-            "sys": {
-              "id": "7TazrN1aXuqvwCJX1Q9g9L"
-            },
-            "reward": "VIP Tech Workshop Access",
+            "id": "3",
+            "tier": "Tier 3",
             "requiredAmt": 200,
-            "description": "Gain exclusive access to a VIP tech workshop hosted by industry experts."
+            "incentives": [
+              {
+                "id": "1", 
+                "description": "Complimentary access to a 7-day meditation challenge"
+              },
+              {
+                "id": "2", 
+                "description": "Discount on premium meditation music playlists"
+              }
+            ]
           }
         ]
       }

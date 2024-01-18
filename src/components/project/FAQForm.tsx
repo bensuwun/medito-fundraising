@@ -23,6 +23,9 @@ export default function FAQForm() {
     const askQuestion = async (formValues : any) => {
         const result = await fetch("http://localhost:3000/api/askQuestion", {
             method: "POST",
+            headers: {
+                "Content-Type": "application/json; charset=utf-8"
+            },
             body: JSON.stringify(formValues)
         });
     }
@@ -30,7 +33,7 @@ export default function FAQForm() {
     return (
         <Accordion.Item key="faqForm" value="faqForm" className="rounded-md mb-2 border-2">
             <Accordion.Control>
-                <h3 className="mr-2 font-medium">Didn&apos;t find the answer you&apos;re looking for? Ask us directly.</h3>
+                <h3 className="mr-2 font-medium">Have other questions?</h3>
             </Accordion.Control>
             <Accordion.Panel>
                 <form onSubmit={form.onSubmit(async (values) => askQuestion(values))}>
@@ -38,21 +41,19 @@ export default function FAQForm() {
                         <div onBlur={() => {form.validateField("email")}}>
                             <TextInput
                                 label="Email address"
-                                required
-                                placeholder="johndoe@gmail.com"
+                                placeholder="Enter a valid email address"
                                 {...form.getInputProps("email")}
                             />
                         </div>
                         <div onBlur={() => {form.validateField("question")}}>
                             <Textarea
                                 label="Question"
-                                required
                                 placeholder="Your question here"
                                 {...form.getInputProps("question")}
                                 />
                         </div>
                     </div>
-                    <Button type="submit" className="bg-slate-600">
+                    <Button type="submit" className="bg-primary">
                         Ask question 
                     </Button>
                 </form>

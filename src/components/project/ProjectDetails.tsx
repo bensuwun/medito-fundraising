@@ -17,7 +17,7 @@ export default function ProjectDetails (
     }) 
 {
     return (
-        <div className="flex flex-col gap-3 p-7">
+        <div className="flex flex-col gap-3 px-9 py-7">
             <h1 className="font-bold text-2xl">{name}</h1>
             <p>{description}</p>
             {/* Progress Bar */}
