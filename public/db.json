@@ -1,19 +1,199 @@
 {
   "donations": [
     {
-      "name": "Truffles",
-      "amount": 150,
+      "name": "Alice",
+      "amount": 5,
       "currency": "USD"
     },
     {
-      "name": "Pedrito",
-      "amount": 150,
-      "currency": "USD"
+      "name": "Bob",
+      "amount": 500,
+      "currency": "AED"
     },
     {
-      "name": "Felix",
-      "amount": 1040,
-      "currency": "USD"
+      "name": "Charlie",
+      "amount": 750,
+      "currency": "AFN"
+    },
+    {
+      "name": "Daisy",
+      "amount": 300,
+      "currency": "ALL"
+    },
+    {
+      "name": "Edward",
+      "amount": 120,
+      "currency": "GBP"
+    },
+    {
+      "name": "Fiona",
+      "amount": 480,
+      "currency": "ANG"
+    },
+    {
+      "name": "George",
+      "amount": 400,
+      "currency": "AOA"
+    },
+    {
+      "name": "Helen",
+      "amount": 250,
+      "currency": "ARS"
+    },
+    {
+      "name": "Ivan",
+      "amount": 420,
+      "currency": "AUD"
+    },
+    {
+      "name": "Jasmine",
+      "amount": 670,
+      "currency": "AWG"
+    },
+    {
+      "name": "Kevin",
+      "amount": 150,
+      "currency": "AZN"
+    },
+    {
+      "name": "Lily",
+      "amount": 350,
+      "currency": "BAM"
+    },
+    {
+      "name": "Michael",
+      "amount": 380,
+      "currency": "HKD"
+    },
+    {
+      "name": "Nina",
+      "amount": 560,
+      "currency": "BDT"
+    },
+    {
+      "name": "Oscar",
+      "amount": 430,
+      "currency": "BGN"
+    },
+    {
+      "name": "Paul",
+      "amount": 190,
+      "currency": "BIF"
+    },
+    {
+      "name": "Quincy",
+      "amount": 670,
+      "currency": "BMD"
+    },
+    {
+      "name": "Rachel",
+      "amount": 880,
+      "currency": "PHP"
+    },
+    {
+      "name": "Samuel",
+      "amount": 540,
+      "currency": "BOB"
+    },
+    {
+      "name": "Tina",
+      "amount": 290,
+      "currency": "BRL"
+    },
+    {
+      "name": "Ulysses",
+      "amount": 720,
+      "currency": "BSD"
+    },
+    {
+      "name": "Victoria",
+      "amount": 370,
+      "currency": "BWP"
+    },
+    {
+      "name": "Walter",
+      "amount": 610,
+      "currency": "CAD"
+    },
+    {
+      "name": "Xena",
+      "amount": 460,
+      "currency": "BZD"
+    },
+    {
+      "name": "Yannick",
+      "amount": 800,
+      "currency": "CAD"
+    },
+    {
+      "name": "Zara",
+      "amount": 240,
+      "currency": "CDF"
+    },
+    {
+      "name": "Archie",
+      "amount": 130,
+      "currency": "CHF"
+    },
+    {
+      "name": "Bella",
+      "amount": 960,
+      "currency": "CLP"
+    },
+    {
+      "name": "Casper",
+      "amount": 570,
+      "currency": "CNY"
+    },
+    {
+      "name": "Diana",
+      "amount": 340,
+      "currency": "COP"
+    },
+    {
+      "name": "Ethan",
+      "amount": 690,
+      "currency": "CRC"
+    },
+    {
+      "name": "Felicity",
+      "amount": 480,
+      "currency": "CVE"
+    },
+    {
+      "name": "Gavin",
+      "amount": 220,
+      "currency": "CZK"
+    },
+    {
+      "name": "Harmony",
+      "amount": 920,
+      "currency": "DJF"
+    },
+    {
+      "name": "Ian",
+      "amount": 490,
+      "currency": "DKK"
+    },
+    {
+      "name": "Jade",
+      "amount": 780,
+      "currency": "DOP"
+    },
+    {
+      "name": "Kai",
+      "amount": 360,
+      "currency": "DZD"
+    },
+    {
+      "name": "Liam",
+      "amount": 600,
+      "currency": "EGP"
+    },
+    {
+      "name": "Mia",
+      "amount": 310,
+      "currency": "EUR"
     }
   ]
 }

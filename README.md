@@ -32,16 +32,16 @@ The public folder contains the data for mocking and configuring the fundraising 
 Contains utility functions to assist in data formatting and calculations.
 
 - `calculateGoalPercentage.ts` - Calculates the goal percentage based on `amtRaised` and `targetAmt`.
-- `currencyConverter.ts` - 
-- `currency.json`- 
+- `currencyConverter.ts` - Converts the donated amount to USD
+- `currency.json`- Contains the mapping of the currency code, symbol, and exchange rate to USD
 - `numberFormatter.ts` - Module containing functions that are responsible for formatting numbers (i.e. `numberFormatter` and `cashFormatter`).
 - `requests.ts` - Module containing requests to interact with APIs. Handles data fetching, adding donations, and stripe integrations (mock). **Also contains `NOTIF_INTERVAL` which indicates how often recent donations should be checked for notifications.**
 
 ## Environment Variables
-- `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` - 
-- `STRIPE_SECRET_KEY` - 
-- `PROD_API_BASE_URL` - The API URL for the production environment
-- `DEV_API_BASE_URL` - The API URL for the development environment
+- `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` - Publishable API key provided by Stripe 
+- `NEXT_PUBLIC_STRIPE_SECRET_KEY` - The secret key is used to perform secure operations on the server side
+- `NEXT_PUBLIC_PROD_API_BASE_URL` - The API URL for the production environment
+- `NEXT_PUBLIC_DEV_API_BASE_URL` - The API URL for the development environment
 
 
 ## Dependencies
