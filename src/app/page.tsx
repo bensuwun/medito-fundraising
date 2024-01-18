@@ -4,10 +4,10 @@ import ProjectTabs from "@/components/project/ProjectTabs/ProjectTabs";
 import DonationNotif from "@/components/project/DonationNotif/DonationNotif";
 import CURRENCY from "@/helpers/currencies";
 
-
 export default async function Home() {
   // Obtain project details
   const proj = project.data.fundraisingProject;
+  
 
   return (
     <>

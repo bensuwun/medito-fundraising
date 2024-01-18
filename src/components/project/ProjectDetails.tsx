@@ -1,12 +1,14 @@
+"use client";
 import Progress from "./Progress";
 import Donate from "./Donate/Donate";
 import { Card } from "@mantine/core";
+import { useEffect, useState } from "react";
 import { getTotalAmountRaised } from "@/helpers/requests";
 
 /**
  * Displays the title, description, and the current progress and target goal of the fundraising initiative.
  */
-export default async function ProjectDetails (
+export default function ProjectDetails (
     {
         name,
         description,
@@ -17,7 +19,16 @@ export default async function ProjectDetails (
         targetAmt: number,
     }) 
 {
-    const totalAmtRaised = await getTotalAmountRaised();
+    const [totalAmtRaised, setTotalAmtRaised] = useState(0);
+
+    const fetchData = async () => {
+        const amt = await getTotalAmountRaised();
+        setTotalAmtRaised(amt);
+    };
+
+    useEffect(() => {
+        fetchData();
+    }, []);
 
     return (
         <div className="flex flex-col gap-3 px-7 py-page-sm lg:py-page container mx-auto lg:grid lg:grid-cols-8">
