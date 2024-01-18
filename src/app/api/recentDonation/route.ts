@@ -7,7 +7,7 @@ export async function GET() {
   try {
     const result = db.donations[db.donations.length-1]
     
-    return NextResponse.json({ result })
+    return NextResponse.json({ ...result })
   } catch (error) {
     return NextResponse.json({ error })
   }

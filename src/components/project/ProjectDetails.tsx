@@ -1,5 +1,5 @@
 import Progress from "./Progress";
-import Donate from "./Donate";
+import Donate from "./Donate/Donate";
 
 /**
  * Displays the title, description, and the current progress and target goal of the fundraising initiative.
@@ -10,13 +10,11 @@ export default function ProjectDetails (
         description,
         targetAmt,
         totalAmtRaised
-        currency
     } : {
         name: string,
         description: string,
         targetAmt: number,
         totalAmtRaised: number
-        currency: string
     }) 
 {
     return (
@@ -26,7 +24,7 @@ export default function ProjectDetails (
             {/* Progress Bar */}
             <Progress targetAmt={targetAmt} totalAmtRaised={totalAmtRaised}/>
 
-            {/* Donate Button */}
+            {/* Donate Section */}
             <Donate />
             <div>
 
