@@ -32,7 +32,7 @@ export default function DonationNotif ()
         fetchData();
         
         // Perform fetch every x intervals
-        const interval = setInterval(() => fetchData(), Math.floor(Math.random() * 15000) + 5);
+        const interval = setInterval(() => fetchData(), Math.floor(Math.random() * 15000) + 10);
 
         return () => clearInterval(interval);
     }, []);

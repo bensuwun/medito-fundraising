@@ -19,7 +19,7 @@ export default function Donate() {
         validate: {
             currency: (value) => (value.length == 3 ? null : 'Select a currency' ),
             amount: (value) => 
-                !/^\d{0,5}$/.test(value.toString()) 
+                !(/^\d{0,5}$/.test(value.toString())) 
                 ? 'Enter a positive amount up to 5 digits.' 
                 : value >= 1 && value <= 99999
                 ? null
@@ -67,6 +67,7 @@ export default function Donate() {
                                     input: classes["input-donate"]
                                 }}
                                 allowNegative={false}
+                                allowDecimal={false}
                                 thousandSeparator=","
                                 clampBehavior="strict"
                                 min={1}
