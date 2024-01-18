@@ -1,5 +1,22 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+Tailwindcss and Mantine were used to help create the UI.
+
+## Files
+### /public
+The public folder contains the data for mocking and configuring the fundraising project. Any changes made here will reflect on the web application.
+
+- `project.json`: The details of the fundraising project. The fundraising project contains:
+    - Name
+    - Description
+    - Target amount (in USD)
+    - FAQs
+    - Rewards
+- `db.json`: Contains mock data for donations. Requires a `name`, `amount`, and `currency`.
+
+### /helpers
+
+
 ## Getting Started
 
 First, run the development server:

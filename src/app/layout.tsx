@@ -7,7 +7,7 @@ import './globals.css';
 import { ColorSchemeScript, MantineProvider } from '@mantine/core';
 import { Notifications } from "@mantine/notifications";
 
-const raleway = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] })
 
 // Used to define application metadata to improve SEO and web shareability.
 export const metadata: Metadata = {
@@ -26,7 +26,7 @@ export default function RootLayout({
       <head>
         <ColorSchemeScript />
       </head>
-      <body className={`${raleway.className}`}>
+      <body className={`${inter.className}`}>
         <MantineProvider defaultColorScheme="light">
           <Notifications position="top-right"/>
           {children}
