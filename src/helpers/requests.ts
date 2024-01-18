@@ -1,4 +1,9 @@
-import DonationType from "@/types/DonationType";
+import { DonationType, EmailQuestionType } from "@/types/Types";
+
+// Change to actual API endpoint
+const API_BASE_URL = process.env.NODE_ENV === "production" 
+    ? `${window.location.origin}/api`
+    : `http://localhost:3000/api`;
 
 /**
  * Makes a GET request to obtain the total amount raised.
@@ -6,7 +11,7 @@ import DonationType from "@/types/DonationType";
 export async function getTotalAmountRaised(): Promise<number> {
     var totalAmtRaised = 0;
     try {
-        const response = await fetch("http://localhost:3000/api/totalAmountRaised", { cache: 'no-store' });
+        const response = await fetch(`${API_BASE_URL}/totalAmountRaised`, { cache: 'no-store' });
         const data = await response.json();
         totalAmtRaised = data.sum;
     } catch (error) {
@@ -19,9 +24,8 @@ export async function getTotalAmountRaised(): Promise<number> {
  * Makes a GET request to obtain the most recent donation for notification.
  */
 export async function getRecentDonation(): Promise<DonationType | null> {
-    // TODO: Update type to DonationType
     try {
-        const response = await fetch("http://localhost:3000/api/recentDonation", { cache: 'no-store' });
+        const response = await fetch(`${API_BASE_URL}/recentDonation`, { cache: 'no-store' });
         const data = await response.json();
         return data;
     } catch (error) {
@@ -29,6 +33,27 @@ export async function getRecentDonation(): Promise<DonationType | null> {
         return null;
     }
 }
+
+/**
+ * Handles the POST request to API to ask a new question.
+ * @param formValues 
+ */
+export async function postAskQuestion(formValues: EmailQuestionType): Promise<EmailQuestionType | null> {
+    try {
+        const result = await fetch(`${API_BASE_URL}/askQuestion`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json; charset=utf-8"
+            },
+            body: JSON.stringify(formValues)
+        });
+        return formValues;
+    } catch(error) {
+        console.log(error);
+        return null;
+    }
+}
+
 /**
  * Interval for fetching recent donations in milliseconds.
  */
