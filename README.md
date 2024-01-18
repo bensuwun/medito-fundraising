@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+[Tailwindcss](https://tailwindcss.com/) and [Mantine](https://mantine.dev/) were used to help create the UI.
+
 ## Configuration
 To configure the project's content, make the necessary changes in `project.json`. 
 
@@ -34,6 +36,12 @@ Contains utility functions to assist in data formatting and calculations.
 - `currency.json`- 
 - `numberFormatter.ts` - Module containing functions that are responsible for formatting numbers (i.e. `numberFormatter` and `cashFormatter`).
 - `requests.ts` - Module containing requests to interact with APIs. Handles data fetching, adding donations, and stripe integrations (mock). **Also contains `NOTIF_INTERVAL` which indicates how often recent donations should be checked for notifications.**
+
+## Environment Variables
+- `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` - 
+- `STRIPE_SECRET_KEY` - 
+- `PROD_API_BASE_URL` - The API URL for the production environment
+- `DEV_API_BASE_URL` - The API URL for the development environment
 
 
 ## Dependencies

@@ -4,6 +4,7 @@ import { Tabs } from "@mantine/core";
 import classes from "./ProjectTabs.module.css";
 import TierRewards from "../TierRewards";
 import FAQs from "../FAQs";
+import { TierRewardType, FAQType } from "@/types/Types";
 
 /**
  * Displays the navigation tabs for (1) Rewards and (2) FAQ.
@@ -13,8 +14,8 @@ export default function ProjectTabs (
         rewards, 
         faqs
     } : {
-        rewards: any, // TODO: Update object type
-        faqs: any    
+        rewards: TierRewardType[], // TODO: Update object type
+        faqs: FAQType[]    
     }) {
     return (
         <Tabs defaultValue="rewards" classNames={classes} className="transition">
@@ -28,16 +29,13 @@ export default function ProjectTabs (
           </Tabs.List>
 
           <Tabs.Panel value="rewards" className="py-7 px-8 flex flex-col gap-3 container mx-auto pb-page-sm lg:pb-page">
-            {/* TODO: Update type */}
             <h2 className="text-xl mb-4 font-semibold lg:text-center">Available Tier Rewards</h2>
             <div className="flex flex-col lg:grid grid-cols-2 gap-4">
-                {rewards.map((reward: { id: string, tier: string, incentives: any, requiredAmt: number }) => {
+                {rewards.map((reward: TierRewardType) => {
                     return (
                         <TierRewards
                             key={reward.id}
-                            tier={reward.tier}
-                            incentives={reward.incentives}
-                            amt={reward.requiredAmt}
+                            {...reward}
                         /> 
                     )
                 })}

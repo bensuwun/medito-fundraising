@@ -44,7 +44,7 @@ export default function FAQForm() {
                                     />
                             </div>
                         </div>
-                        <Button type="submit" className="bg-primary w-full">
+                        <Button type="submit" className="bg-primary w-full lg:w-auto">
                             Ask question
                         </Button>
                     </form>

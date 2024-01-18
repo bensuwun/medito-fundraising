@@ -2,6 +2,7 @@
 
 import { Accordion, Card } from "@mantine/core";
 import FAQForm from "./FAQForm";
+import { FAQType } from "@/types/Types";
 
 /**
  * Displays a dropdown containing the question and answer.
@@ -12,11 +13,7 @@ export default function FAQs(
         items
     } : 
     {   
-        items: [{
-            id: string,
-            question: string, 
-            answer: string
-        }]
+        items: FAQType[]
     }) 
 {
     const accordionItems = items.map(item => {
