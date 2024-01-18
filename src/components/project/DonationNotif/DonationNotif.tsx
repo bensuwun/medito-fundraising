@@ -5,7 +5,7 @@ import { notifications } from "@mantine/notifications";
 import { useState, useEffect } from "react";
 import classes from "./DonationNotif.module.css";  
 import { getRecentDonation, NOTIF_INTERVAL } from "@/helpers/requests";
-import DonationType from "@/types/DonationType";
+import { DonationType } from "@/types/Types";
 
 /**
  * Displays the latest donator in the past 5 minutes.
