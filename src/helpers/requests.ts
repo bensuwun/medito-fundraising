@@ -2,7 +2,7 @@ import { DonationType, EmailQuestionType } from "@/types/Types";
 
 // Change to actual API endpoint
 const API_BASE_URL = process.env.NODE_ENV === "production" 
-    ? `${window.location.origin}/api`
+    ? `https://medito-fundraise.pages.dev/api`
     : `http://localhost:3000/api`;
 
 /**
