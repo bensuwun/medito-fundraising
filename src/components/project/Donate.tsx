@@ -4,7 +4,7 @@ import React, { ChangeEvent, useState } from 'react';
 import Dropdown from '../Dropdown';
 import { Button, TextInput } from '@mantine/core';
 import '@mantine/core/styles.css';
-import currency from '../../../data/constant/currency.json'
+import currency from '../../helpers/currency.json'
 
 const options = currency
 type donationObj = {
