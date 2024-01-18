@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server"
 export const dynamic = 'force-dynamic' // defaults to auto
+export const runtime = "edge";
 
 /**
  * Used to test the payload of the ask question request.
